@@ -1,47 +1,47 @@
 Qwen/Qwen1.5-0.5B:
-  per_device_train_batch_size: 16  # Leverage the large memory for smaller models
-  gradient_accumulation_steps: 1  # Fewer steps needed due to larger batch size
-  num_train_epochs: 1
+  per_device_train_batch_size: 12  # Reduce slightly to allow room for mixed precision
+  gradient_accumulation_steps: 2  # Balance memory and effective batch size
+  num_train_epochs: 3  # Increased for better convergence
   lora_rank: 8
   lora_alpha: 16
   lora_dropout: 0.1
 
 Qwen/Qwen1.5-1.8B:
-  per_device_train_batch_size: 8  # Moderate batch size for the larger model
-  gradient_accumulation_steps: 2
-  num_train_epochs: 1
+  per_device_train_batch_size: 6  # Moderate batch size
+  gradient_accumulation_steps: 4  # Increase to reduce per-step memory usage
+  num_train_epochs: 3
   lora_rank: 4
   lora_alpha: 8
   lora_dropout: 0.1
 
 Qwen/Qwen1.5-7B:
-  per_device_train_batch_size: 4  # Utilize A100's memory for large models
-  gradient_accumulation_steps: 4
-  num_train_epochs: 1
+  per_device_train_batch_size: 2  # Conservative batch size for large models
+  gradient_accumulation_steps: 8  # To maintain an effective batch size
+  num_train_epochs: 3
   lora_rank: 4
   lora_alpha: 8
   lora_dropout: 0.1
 
 google/gemma-2b:
-  per_device_train_batch_size: 8
-  gradient_accumulation_steps: 2
-  num_train_epochs: 1
+  per_device_train_batch_size: 6
+  gradient_accumulation_steps: 4
+  num_train_epochs: 3
   lora_rank: 4
   lora_alpha: 8
   lora_dropout: 0.1
 
 google/gemma-7b:
-  per_device_train_batch_size: 4
-  gradient_accumulation_steps: 4
-  num_train_epochs: 1
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
+  num_train_epochs: 3
   lora_rank: 4
   lora_alpha: 8
   lora_dropout: 0.1
 
 microsoft/Phi-3-mini-4k-instruct:
-  per_device_train_batch_size: 8
-  gradient_accumulation_steps: 2
-  num_train_epochs: 1
+  per_device_train_batch_size: 6
+  gradient_accumulation_steps: 4
+  num_train_epochs: 3
   lora_rank: 4
   lora_alpha: 8
   lora_dropout: 0.1
