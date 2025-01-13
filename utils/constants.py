@@ -28,6 +28,16 @@ phi_template = {
     "system": "You are a helpful assistant capable of handling complex queries and tasks.",
 }
 
+llama_template = {
+    "system_format": "<s>[INST] <<SYS>>\n{content}\n<</SYS>>\n\n",
+    "user_format": "{content} [/INST]",
+    "assistant_format": " {content} </s>",
+    "tool_format": "{content}",
+    "function_format": "{content}",
+    "observation_format": "{content}",
+    "system": "You are a helpful assistant capable of handling a wide variety of questions and tasks.",
+}
+
 model2template = {
     "Qwen/Qwen1.5-0.5B": qwen_template,
     "Qwen/Qwen1.5-1.8B": qwen_template,
@@ -35,6 +45,7 @@ model2template = {
     "google/gemma-2b": gemma_template,
     "google/gemma-7b": gemma_template,
     "microsoft/Phi-3-mini-4k-instruct": phi_template,
+    "meta-llama/Llama-2-7b-chat-hf": llama_template,
 }
 
 model2size = {
@@ -44,6 +55,7 @@ model2size = {
     "google/gemma-2b": 2_510_000_000,
     "google/gemma-7b": 8_540_000_000,
     "microsoft/Phi-3-mini-4k-instruct": 3_000_000_000,
+    "meta-llama/Llama-2-7b-chat-hf": 7_000_000_000,
 }
 
 model2base_model = {
@@ -53,4 +65,5 @@ model2base_model = {
     "google/gemma-2b": "gemma",
     "google/gemma-7b": "gemma",
     "microsoft/Phi-3-mini-4k-instruct": "phi",
+    "meta-llama/Llama-2-7b-chat-hf": "llama-2",
 }
