@@ -44,6 +44,7 @@ model2template = {
     "Qwen/Qwen1.5-7B": qwen_template,
     "google/gemma-2b": gemma_template,
     "google/gemma-7b": gemma_template,
+    "google/gemma-7b-it": gemma_template,
     "microsoft/Phi-3-mini-4k-instruct": phi_template,
     "meta-llama/Llama-2-7b-chat-hf": llama_template,
 }
@@ -54,6 +55,7 @@ model2size = {
     "Qwen/Qwen1.5-7B": 7_720_000_000,
     "google/gemma-2b": 2_510_000_000,
     "google/gemma-7b": 8_540_000_000,
+    "google/gemma-7b-it": 8_540_000_000,
     "microsoft/Phi-3-mini-4k-instruct": 3_000_000_000,
     "meta-llama/Llama-2-7b-chat-hf": 7_000_000_000,
 }
@@ -64,6 +66,7 @@ model2base_model = {
     "Qwen/Qwen1.5-7B": "qwen1.5",
     "google/gemma-2b": "gemma",
     "google/gemma-7b": "gemma",
+    "google/gemma-7b-it": "gemma",
     "microsoft/Phi-3-mini-4k-instruct": "phi",
     "meta-llama/Llama-2-7b-chat-hf": "llama-2",
 }

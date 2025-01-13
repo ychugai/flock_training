@@ -1,7 +1,8 @@
-meta-llama/Llama-2-7b-chat-hf:
-  per_device_train_batch_size: 2  # Adjust for memory constraints on A100 40GB
-  gradient_accumulation_steps: 16  # Effective batch size: 2 × 16 = 32
-  num_train_epochs: 10  # Comprehensive training
-  lora_rank: 8  # Higher rank for better performance
-  lora_alpha: 16  # Scaling factor for LoRA
-  lora_dropout: 0.1  # Dropout for regularization
+
+google/gemma-7b-it:
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 16
+  num_train_epochs: 10
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.1
